@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Create from "./components/Create";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import BlogDetails from "./components/BlogDetails";
+// we are accessing BrowserRouter of react-router-dom as Router in this application
 
 function App() {
+  // const person= {name:"Ram", age: 50};
+  // const num1=50;
+  // const num2=5;
+  // const link= "www.google.com";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        {/* NavBar must appear on all the routes thus is excluded from switch */}
+        <div className="content">
+          <Switch>
+            {/* components inside switch only gets routed i.e only one route shows at a time  */}
+            <Route exact path="/">
+              {/* Since react matches the path with the url serially and routes immediately if the beginning character of path matches url without matching the rest
+              To resolve this prblm we use exact prop in the route */}
+              <Home/>
+            </Route>
+            <Route path="/create">
+              <Create/>
+            </Route>
+            <Route path="/blog/:id"> 
+            {/* here :id is used to pass the dynamic routing parameter */}
+              <BlogDetails/>
+            </Route>
+          </Switch>
+          
+          {/* <h1>App Component</h1>
+          <p>{person.name}</p>
+          <p>{num1>num2? "true" : "false"}</p>
+          <p>{Math.random()*10}</p>
+          <a href={link}>Google site</a> */}
+          
+        </div>
+      </div>
+    </Router>
   );
 }
 

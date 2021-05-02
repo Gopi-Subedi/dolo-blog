@@ -1,0 +1,16 @@
+{
+    "blogs" :[
+        {
+            "title":"Journey to south",
+            "body":"My travel to south",
+            "author":"Mario",
+            "id":1
+        },
+        {
+            "title":"Journey to east",
+            "body":"My travel to east",
+            "author":"Hari Shrestha",
+            "id":2
+        }
+    ]
+}
