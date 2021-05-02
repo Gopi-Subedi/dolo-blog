@@ -1,16 +1,16 @@
 {
-    "blogs" :[
-        {
-            "title":"Journey to south",
-            "body":"My travel to south",
-            "author":"Mario",
-            "id":1
-        },
-        {
-            "title":"Journey to east",
-            "body":"My travel to east",
-            "author":"Hari Shrestha",
-            "id":2
-        }
-    ]
+  "blogs": [
+    {
+      "title": "Journey to south",
+      "body": "My travel to south. The United States, which took a forceful stance on other Arab revolts, remained relatively passive in the face of the kingdom’s unrest and crackdown. To many who are familiar with the region, this came as no surprise: of all the Arab states that saw revolts last year, Bahrain is arguably the most closely tied to American strategic interests.",
+      "author": "Mario",
+      "id": 1
+    },
+    {
+      "title": "Journey to east",
+      "body": "My travel to east. The bizarre tale of how the hiring of a reality TV contestant to greet high-end customers led to the firing of a successful CEO. Plus: a follow-up article.",
+      "author": "Yoshida",
+      "id": 2
+    }
+  ]
 }

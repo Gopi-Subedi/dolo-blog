@@ -7,8 +7,9 @@ const BlogList = ({blogs,title,deleteHandler}) =>{//{blogs} = props
             <h2>{title}</h2>
             {blogs.map((blog)=>(  //map function similar to foreach & key keeps track of output and compulsary
             <div className="blog-preview" key={blog.id}>
-                <Link to={'/blog/${blog.id}'}>
-                    {/* in order to use javascript we use {' to define varaible we include ${} within'} */}
+                <Link to={`/blog/${blog.id}`}>
+                    {/* <Link to={`/blog/${blog.id}`}> OR <Link to={'/blog/'+blog.id}>
+                    in order to use javascript we use {` to define varaible we include ${} OR simply use + sign within`} */}
                     <h2>{blog.title}</h2>
                     <p>written by: {blog.author}</p>
                 </Link>
