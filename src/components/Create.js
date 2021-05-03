@@ -1,14 +1,17 @@
 import { useState } from "react";
+import {useHistory} from 'react-router-dom';
 
 const Create =() =>{
 
-    const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
     const [author,setAuthor] = useState('Mario');
     const [isPending,setIsPending] = useState(false);
+    const history = useHistory();
 
     const submitHandler =(e) =>{
         e.preventDefault();
+
         const blog = {title, body, author};
         console.log(blog);
 
@@ -21,6 +24,8 @@ const Create =() =>{
         }).then(()=>{
             console.log("New Blog Added");
             setIsPending(false);
+            // history.go(-1); it will redirect back one step
+            history.push('/');//push will redirect to defined route
         })
     }
 
