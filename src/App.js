@@ -4,12 +4,15 @@ import Create from "./components/Create";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import BlogDetails from "./components/BlogDetails";
 // we are accessing BrowserRouter of react-router-dom as Router in this application
+import NotFound from "./components/NotFound";
+
 
 function App() {
   // const person= {name:"Ram", age: 50};
   // const num1=50;
   // const num2=5;
   // const link= "www.google.com";
+  
   return (
     <Router>
       <div className="App">
@@ -29,6 +32,10 @@ function App() {
             <Route path="/blog/:id"> 
             {/* here :id is used to pass the dynamic routing parameter */}
               <BlogDetails/>
+            </Route>
+            <Route path="*"> 
+            {/* we use * to catch all other random urls and this route is always placed at last*/}
+              <NotFound />
             </Route>
           </Switch>
           
