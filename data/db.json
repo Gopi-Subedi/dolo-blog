@@ -11,6 +11,12 @@
       "body": "My travel to east. The bizarre tale of how the hiring of a reality TV contestant to greet high-end customers led to the firing of a successful CEO. Plus: a follow-up article.",
       "author": "Yoshida",
       "id": 2
+    },
+    {
+      "title": "Blog Title",
+      "body": "Blog Body",
+      "author": "Mario",
+      "id": 3
     }
   ]
 }

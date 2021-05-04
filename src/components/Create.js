@@ -17,11 +17,12 @@ const Create =() =>{
 
         setIsPending(true);
 
-        fetch('http://localhost:8000/blogs',{
+        fetch('http://localhost:8000/blogs', { // fake API endpoint
             method:'POST',
-            headers:{"Context-Type" : "application/json" },
-            body:JSON.stringify(blog)
-        }).then(()=>{
+            headers:{'Content-Type': 'application/json'},
+            body:JSON.stringify(blog), // turn the JS object literal into a JSON string
+        })
+        .then(()=>{
             console.log("New Blog Added");
             setIsPending(false);
             // history.go(-1); it will redirect back one step
